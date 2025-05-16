@@ -31,7 +31,7 @@
     <p >This is the <span style="color:red">Clicker</span> page.</p>
     <a href="index.html">Go to HUB</a>
     <p>You have <span id="counter">0</span> clicker points<span id="suffix">!</span></p>
-    <button class="button" onclick="increment(clickpower)">Click me!</button>
+    <button class="button" onclick="clickbutton()">Click me!</button>
     <p id = "up0" onclick="buysmallcursor()"></p>
     <p id = "up1" onclick="buycursor()"></p>
     <script>
@@ -40,6 +40,12 @@
         let counterlimit = 100;
         let upgrades = [0,0];
         let timesinactive = 0;
+        function clickbutton() {
+            increment(clickpower);
+            if (Math.random() < 1 / 5000) {
+                window.open("images/crunchwrap.jpg", "_blank");
+            }
+        }
         function increment(incrementer){
             count = count + incrementer;
             if (count >= counterlimit) {
@@ -87,7 +93,7 @@
         }
         window.onload = function() {
             setInterval(() =>{
-                    increment(upgrades[1] * 10 + upgrades[0]);
+                    increment(upgrades[1] * 11 + upgrades[0]);
                 }, 1000);
         }
         function handleVisibilityChange() {
