@@ -1,0 +1,88 @@
+:root {
+    --color-bg: black;
+    --color-important: #31ff31;
+    --color-normal: #39b124;
+    --color-unimportant: #008000;
+}
+
+.light {
+    --color-bg: white;
+    --color-important: #d32f2f;
+    --color-normal: #333333;
+    --color-unimportant: #666666;
+}
+
+.highcontrast {
+    --color-bg: black;
+    --color-important: #4988d5;
+    --color-normal: white;
+    --color-unimportant: #cdcdcd;
+}
+
+.dark {
+    --color-bg: rgb(53, 53, 53);
+    --color-important: #7f1aa3;
+    --color-normal: white;
+    --color-unimportant: #adadad;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-normal);
+    font-family: Cascadia Code, Consolas, 'Courier New', monospace;
+}
+
+.important {
+    color: var(--color-important);
+}
+
+.unimportant {
+    color: var(--color-unimportant);
+}
+
+.console {
+    position: fixed;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    width: 300px;
+    background-color: var(--color-bg);
+    color: var(--color-normal);
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border: 2px solid var(--color-normal);
+    border-radius: 10px;
+}
+
+button {
+    font-family: Cascadia Code, Consolas, 'Courier New', monospace;
+    margin: 5px;
+    color: var(--color-normal);
+    border: 2px, solid, var(--color-normal);
+    background-color: var(--color-bg);
+    border-radius: 10px;
+    width: 100px;
+    height: 75px;
+}
+
+.popup {
+    display: none;
+    position: fixed; 
+    z-index: 1000;
+}
+
+.popup-content {
+    background: var(--color-bg);
+    padding: 5px;
+    border-radius: 8px;
+    border: 2px, solid, var(--color-normal);
+    height: auto;
+    width: auto;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer</title>
+    <link rel="stylesheet" href="game.css">
+<script src="gamecode.js"></script>
+</head>
+<body>
+    <p id="themePopupLocation"onclick="openPopup('Theme','themePopupLocation')" style="font-size: 12px;">themes</p>
+
+    <p class="unimportant">this is some unimportant text</p>
+    <p>this is some text</p>
+    <p class="important">this is important text</p>
+
+    <div id="console" class="console"></div>
+
+    <div id="popupTheme" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('Theme')">&times;</span>
+            <p onclick="setTheme('hacker')">hacker</p>
+            <p onclick="setTheme('light')">light</p>
+            <p onclick="setTheme('highcontrast')">high contrast</p>
+            <p onclick="setTheme('dark')">dark</p>
+        </div>
+    </div>
+</body>
+</html>
