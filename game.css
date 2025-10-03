@@ -3,6 +3,7 @@
     --color-important: #31ff31;
     --color-normal: #39b124;
     --color-unimportant: #008000;
+    --color-window: #012e01;
 }
 
 .light {
@@ -10,6 +11,7 @@
     --color-important: #d32f2f;
     --color-normal: #333333;
     --color-unimportant: #666666;
+    --color-window: #d1d1d1;
 }
 
 .highcontrast {
@@ -17,13 +19,15 @@
     --color-important: #4988d5;
     --color-normal: white;
     --color-unimportant: #cdcdcd;
+    --color-window: #1a1119;
 }
 
 .dark {
-    --color-bg: rgb(53, 53, 53);
+    --color-bg: #202020;
     --color-important: #7f1aa3;
     --color-normal: white;
     --color-unimportant: #adadad;
+    --color-window: #1d1d1d;
 }
 
 body {
@@ -46,7 +50,7 @@ body {
     top: 5px;
     bottom: 5px;
     width: 300px;
-    background-color: var(--color-bg);
+    background-color: var(--color-window);
     color: var(--color-normal);
     padding: 10px;
     box-sizing: border-box;
@@ -59,7 +63,7 @@ button {
     font-family: Cascadia Code, Consolas, 'Courier New', monospace;
     margin: 5px;
     color: var(--color-normal);
-    border: 2px, solid, var(--color-normal);
+    border: 2px solid var(--color-normal);
     background-color: var(--color-bg);
     border-radius: 10px;
     width: 100px;
@@ -75,8 +79,8 @@ button {
 .popup-content {
     background: var(--color-bg);
     padding: 5px;
-    border-radius: 8px;
-    border: 2px, solid, var(--color-normal);
+    border-radius: 3px;
+    border: 2px solid var(--color-normal);
     height: auto;
     width: auto;
 }
@@ -84,5 +88,30 @@ button {
 .close {
     float: right;
     font-size: 24px;
+    cursor: pointer;
+}
+
+.shop {
+    justify-content: space-between;
+    align-items: center;   
+    padding: 5px;
+    border: 2px solid var(--color-normal);
+    width: 500px;
+    height: 100px;
+    background: var(--color-window);
+    border-radius: 10px;
+}
+
+.shop-text {
+    flex: 1;
+}
+
+.shop-button {
+    padding: 8px 16px;
+    border: 2px solid var(--color-normal);
+    border-radius: 6px;
+    background-color: var(--color-bg);
+    color: var(--color-normal);
+    font-size: 0.9rem;
     cursor: pointer;
 }

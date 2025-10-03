@@ -50,10 +50,8 @@ function openPopup(name,targetId) {
     popup.style.left = rect.left + window.scrollX + "px";
   
     document.getElementById("popup"+name).style.display = "block";
-    addToConsole("popup opened: "+ name)
 }
 
 function closePopup(name) {
     document.getElementById("popup"+name).style.display = "none";
-    addToConsole("popup closed: "+ name)
 }
